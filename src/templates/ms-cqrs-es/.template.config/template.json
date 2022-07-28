@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "XAM/Pondrop",
+  "classifications": ["net6", "Microservice", "API", "CQRS"],
+  "identity": "Microservice.CQRS.ES",
+  "name": "Microservice w/CQRS & Event Sourcing",
+  "shortName": "ms-cqrs-es",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "symbols": {
+    "projectName": {
+      "type": "parameter",
+      "dataType": "string",
+      "replaces": "PROJECT_NAME",
+      "fileRename": "PROJECT_NAME",
+      "isRequired": true
+    }
+  },
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "exclude": [
+            "appsettings.local.json",
+            ".git/**",
+            ".idea/**",
+            ".vs/**",
+            ".vcode/**",
+            "*.DotSettings.user",
+            ".DS_Store"
+          ]
+        }
+      ]
+    }
+  ]
+}

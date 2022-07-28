@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageType>Template</PackageType>
+    <PackageVersion>1.0</PackageVersion>
+    <PackageId>Cqrs.Microservice.Templates</PackageId>
+    <Title>CQRS Microservice Template</Title>
+    <Authors>XAM/Pondrop</Authors>
+    <Description>Quick setup template for a CQRS microservice with a CosmosDB backend.</Description>
+    <PackageTags>dotnet-new;templates;microservices</PackageTags>
+
+    <TargetFramework>netstandard2.0</TargetFramework>
+
+    <IncludeContentInPack>true</IncludeContentInPack>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <ContentTargetFolders>content</ContentTargetFolders>
+    <NoWarn>$(NoWarn);NU5128</NoWarn>
+    <NoDefaultExcludes>true</NoDefaultExcludes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content
+      Include="templates\**\*"
+      Exclude="templates\**\bin\**;templates\**\obj\**;templates\**\.idea\**;templates\**\.vs\**;templates\**\*.local*" />
+    <Compile Remove="**\*" />
+  </ItemGroup>
+
+</Project>
